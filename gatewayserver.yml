@@ -12,7 +12,7 @@ eureka:
 
 
 gatewayserver:
-  routeInfos:
+  route-infos:
     accounts:
       path: "/eazybank/accounts/**"
       filterFrom: "/eazybank/accounts/(?<segment>.*)"
