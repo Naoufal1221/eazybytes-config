@@ -12,18 +12,18 @@ eureka:
 
 
 gatewayserver:
-  route-infos:
+  routeInfos:
     accounts:
       path: "/eazybank/accounts/**"
       filterFrom: "/eazybank/accounts/(?<segment>.*)"
       filterTo: "/${segment}"
       uri: "lb://ACCOUNTS"
-     cards:
+    cards:
       path: "/eazybank/cards/**"
       filterFrom: "/eazybank/cards/(?<segment>.*)"
       filterTo: "/${segment}"
       uri: "lb://CARDS"
-     loans:
+    loans:
       path: "/eazybank/loans/**"
       filterFrom: "/eazybank/loans/(?<segment>.*)"
       filterTo: "/${segment}"
