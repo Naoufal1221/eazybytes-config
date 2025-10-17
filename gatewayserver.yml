@@ -9,3 +9,23 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: "http://localhost:8070/eureka/"
+
+
+gatewayserver:
+  routeInfos:
+    accounts:
+      path: "/eazybank/accounts/**"
+      filterFrom: "/eazybank/accounts/(?<segment>.*)"
+      filterTo: "/${segment}"
+      uri: "lb://ACCOUNTS"
+     cards:
+      path: "/eazybank/cards/**"
+      filterFrom: "/eazybank/cards/(?<segment>.*)"
+      filterTo: "/${segment}"
+      uri: "lb://CARDS"
+     loans:
+      path: "/eazybank/loans/**"
+      filterFrom: "/eazybank/loans/(?<segment>.*)"
+      filterTo: "/${segment}"
+      uri: "lb://LOANS"
+    
